@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Header Styling */
+    header {
+      background: linear-gradient(90deg, #ff6f61, #ff3d3d);
+      padding: 10px 0;
+    }
+    .logo a {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.75rem;
+      color: #fff;
+    }
+    .right-side {
+      display: flex;
+      align-items: center;
+    }
+
+    /* Sidebar Styling */
+    #sidebar {
+      background-color: #343a40;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    #sidebar .nav-link {
+      color: #fff;
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      transition: background-color 0.2s ease-in-out;
+    }
+    #sidebar .nav-link:hover {
+      background-color: #495057;
+    }
+    #sidebar .nav-link.active {
+      background-color: #495057;
+      font-weight: bold;
+    }
+    #sidebar .nav-link i {
+      margin-right: 10px;
+    }
+
+    /* Main Content Styling */
+    main {
+      background-color: #f8f9fa;
+      min-height: 100vh;
+      padding: 30px;
+    }
+    .card {
+      border: none;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <a href="/">LOGOS</a>
+      </div>
+      <div class="right-side">
+        <button class="btn btn-outline-light">Profile</button>
+        <button class="btn btn-outline-light ms-2">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
+        <div class="position-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">
+                <i class="bi bi-house-door-fill"></i> Dashboard
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile">
+                <i class="bi bi-people-fill"></i> Users
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/settings">
+                <i class="bi bi-gear-fill"></i> Settings
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/addblog">
+                <i class="bi bi-journal-plus"></i> Add Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog">
+                <i class="bi bi-journal"></i> My Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/allblog">
+                <i class="bi bi-journal"></i> All Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/addtopic">
+                <i class="bi bi-bar-chart-fill"></i> Add Topic
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card p-3">
+              <h5 class="card-title">Dashboard</h5>
+              <p class="card-text">View and manage your dashboard stats.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3">
+              <h5 class="card-title">Manage Users</h5>
+              <p class="card-text">View and manage users in the system.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card p-3">
+              <h5 class="card-title">Blog Posts</h5>
+              <p class="card-text">Create and manage your blog posts.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
